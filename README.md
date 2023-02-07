@@ -1,11 +1,11 @@
 
 # What is this project about?
 
-This project is a backend project to demonstrate building a multi-container Backend application with .NET 6 Web API following Clean Architecture like controller,services and repository structure. The solution uses Dockerfile to push to Docker with SQLite database.
+This backend project uses the.NET 6 Web API to show how to develop a multi-container backend application while adhering to clean architecture principles like controller, services, and repository organization. To push to Docker with a SQLite database, the solution uses Dockerfile.
 
 # What does the Solution offer?
 
-The Solution is built keeping in mind the most fundamental blocks an API must have in order to build a scalable and near-perfect API component. The solution offers a complete implementation of the following:
+The most fundamental building pieces an API has to have are taken into consideration when creating the Solution in order to provide a scalable and nearly ideal API component. The following are fully implemented as part of the solution:
 
 - [x] Clean Architecture with separated layers for Api, Core, domain, Infrastructure and Application
 - [x] UnitOfWork with Generic Repository
@@ -15,7 +15,7 @@ The Solution is built keeping in mind the most fundamental blocks an API must ha
 - [x] Preconfigured Swagger UI
 - [x] Ready to use Docker configuration with Dockerfiles 
 - [x] JWT Token API for Generation and Configured JWT Validation
-- [x] Roles based Authorization with predefined Roles for passwordchange, and we can also add Authorization for other but idid not add line off code for all. 
+- [x] Roles based Authorization with predefined Roles for passwordchange, and we can also add Authorization for other but idid not add line of code for all. 
 - [x] Complete NUnit Test Implementation
 - [x] API Versioning with separated Swagger Documentation
 - [x] AutoMapper implementation for Entity-to-DTO conversion
@@ -28,28 +28,35 @@ The Solution is built keeping in mind the most fundamental blocks an API must ha
 * Entity Framework Core (EFCore 6)
 * MediatR for .NET 6
 * Fluent Validation for .NET 6
-* SQLite
+* SQLite, becuase easy to test at any localhost. Database is autogenerate no need to configure.
 * SwaggerUI
 * AutoMapper
 * NUnit3TestAdapter
-* Docker Compose
+* Dockerfile
 
 # How do I get started with Docker Compose?
 
 To get started, follow the below steps:
 
 1. Install .NET 6 SDK
-2. Install the latest NodeJS 
 3. Install Docker Desktop (for Windows) / Docker (for Linux/Mac)
 4. Clone the Solution into your Local Directory
-5. On the Repository root you can find the docker-compose.yml file
+5. On the Repository root you can find the dockerfile
 6. Run the below command to build and run the solution in Docker (requires a working Docker installation)
-
+## Build and run docker image
 ```
-> docker-compose build --force-rm --no-cache && docker-compose up
+> docker build -t dockeryourusername/repositoryname:tagname .
+> docker run dockeryourusername/repositoryname:tagname .
 ```
-
-7. Once the containers start successfully navigate to http://localhost
+## example build docker image
+```
+  > docker build -t tsedeke2018/dotnet_full_satck_integrify:first .
+```
+## example run docker image
+```
+> docker run tsedeke2018/dotnet_full_satck_integrify:first .
+```
+7. Once the containers start successfully navigate to your localhost http://localhost in Postman.
 
 # I'm not into Docker. How do I get started?
 
