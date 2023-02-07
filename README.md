@@ -79,7 +79,14 @@ You can also just run the solution without Docker by following the steps below:
 | PUT        | /api/v1/todos/:{id}           | Update existed todo by id | http://localhost:5055/api/v1/todos:3                                 
 | PUT        | /api/v1/updateStatus          | Update todo's status      | http://localhost:5055/api/v1/updateStatus?id=1&status=3              
 | DELETE     | /api/v1/todos/:{id}           | Delete existed todo by id | http://localhost:5055/api/v1/todos:3                                 
- 
+  ### Example for create/update new todo list                                                        
+```
+  {
+    "name": "Wine",
+    "description": "Unix Platform",
+    "status": 1
+  }
+```
 ## Available api endpoints for custom user
 
 | Web Method | API Endpoint URL              | Description                | Example                                                              
