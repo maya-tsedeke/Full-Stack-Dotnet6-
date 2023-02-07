@@ -1,9 +1,3 @@
-![ContainerNinja.CleanArchitecture](assets/container-ninja-ca.png)
-
-[![.NET](https://github.com/referbruv/ContainerNinja.CleanArchitecture/actions/workflows/dotnet.yml/badge.svg)](https://github.com/referbruv/ContainerNinja.CleanArchitecture/actions/workflows/dotnet.yml)
-[![Docker](https://github.com/referbruv/ContainerNinja.CleanArchitecture/actions/workflows/docker-image.yml/badge.svg)](https://github.com/referbruv/ContainerNinja.CleanArchitecture/actions/workflows/docker-image.yml)
-![GitHub stars](https://img.shields.io/github/stars/referbruv/ContainerNinja.CleanArchitecture)
-[![Twitter Follow](https://img.shields.io/twitter/follow/referbruv?style=social&label=follow)](https://twitter.com/referbruv)
 
 # What is this project about?
 
