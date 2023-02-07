@@ -63,18 +63,18 @@ You can also just run the solution without Docker by following the steps below:
 > dotnet run --project ./Api
 ```
 4. Open a browser with SwaggerUI , automatically navigate to http://localhost or You can use tetsing tools like Postman and you're all set! 
-| Web Method | API Endpoint URL             | Description              | Example                                                              
-| :----------| -----------------------------|--------------------------|----------------------------------------------------------------------
-| GET        |/api/v1                       | get all                  | http://localhost:5055/api/v1                                         
-| GET        |/api/v1/paging                | get all with page number | http://localhost:5055/api/v1/paging?sort=Id&desc=true&skip=2&take=10 
-| Get        |/api/v1/search                | get all by search name   |http://localhost:5055/api/v1/search?sort=Id&desc=true&searchTerm=Woine
-| Get        |/api/v1/getById               | get all by id            |                                                                      
-| Get        |/api/v1/todos/status ={status}| get all by status (0,1,2)|                                                                            
-| POST       |/api/v1/todos                 | Post new Todo (Create)   |http://localhost:5055/api/v1/todos                                    
-| PUT        |api/v1/todos/:{id}            | Update existed todo by id| http://localhost:5055/api/v1/todos:3                                 
-| PUT        |/api/v1/updateStatus          | Update todo's status      | http://localhost:5055/api/v1/updateStatus?id=1&status=3              
-| DELETE     |api/v1/todos/:{id}            | Delete existed todo by id| http://localhost:5055/api/v1/todos:3                                 
-
+| Web Method | API Endpoint URL              | Description               | Example                                                              
+| :----------| ------------------------------|---------------------------|----------------------------------------------------------------------
+| GET        | /api/v1                       | get all                   | http://localhost:5055/api/v1                                         
+| GET        | /api/v1/paging                | get all with page number  | http://localhost:5055/api/v1/paging?sort=Id&desc=true&skip=2&take=10 
+| Get        | /api/v1/search                | get all by search name    | http://localhost:5055/api/v1/search?sort=Id&desc=true&searchTerm=Woine
+| Get        | /api/v1/getById               | get all by id             |                                                                      
+| Get        | /api/v1/todos/status ={status}| get all by status (0,1,2) |                                                                            
+| POST       | /api/v1/todos                 | Post new Todo (Create)    | http://localhost:5055/api/v1/todos                                    
+| PUT        | /api/v1/todos/:{id}           | Update existed todo by id | http://localhost:5055/api/v1/todos:3                                 
+| PUT        | /api/v1/updateStatus          | Update todo's status      | http://localhost:5055/api/v1/updateStatus?id=1&status=3              
+| DELETE     | /api/v1/todos/:{id}           | Delete existed todo by id | http://localhost:5055/api/v1/todos:3                                 
+ 
 # No Default User: Start with signup user using either SwaggerUI or Postman
 | Web Method | API Endpoint URL             | Description              | Example
 | :----------| -----------------------------|--------------------------|----------------------------------------
