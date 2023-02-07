@@ -62,7 +62,10 @@ You can also just run the solution without Docker by following the steps below:
 ```
 > dotnet run --project ./Api
 ```
-4. Open a browser with SwaggerUI , automatically navigate to http://localhost or You can use tetsing tools like Postman and you're all set!
+4. Open a browser with SwaggerUI ,or automatically navigate to http://localhost or You can use tetsing tools like Postman and you're all set!
+5. Start with signup user using either SwaggerUI or Postman
+6. Then login to the user account.
+7. You will receive the created token value after logging in. Take a copy of this token, go to the SwaggerUI Authorize button, and enter bearer and pest after the term bearer has been separated by a space. Using POSTMAN, pick Accept and Authorization from the key column, select JSON/Application from the value column accept key Accept, and Pest Token to the Authorization Row under the Value Column. After that, you may use this little project to test and have fun. Below is a table with a list of the end points and examples. 
 ## Available api endpoints
 
 | Web Method | API Endpoint URL              | Description               | Example                                                              
@@ -77,30 +80,39 @@ You can also just run the solution without Docker by following the steps below:
 | PUT        | /api/v1/updateStatus          | Update todo's status      | http://localhost:5055/api/v1/updateStatus?id=1&status=3              
 | DELETE     | /api/v1/todos/:{id}           | Delete existed todo by id | http://localhost:5055/api/v1/todos:3                                 
  
-# No Default User: Start with signup user using either SwaggerUI or Postman
-| Web Method | API Endpoint URL             | Description              | Example
-| :----------| -----------------------------|--------------------------|----------------------------------------
-| GET        |/api/v1                       | get all                  | 
-| :----------| -----------------------------|--------------------------|----------------------------------------
-| GET        |/api/v1/paging                | get all with page number | 
-| :----------| -----------------------------|--------------------------|----------------------------------------
-| Get        |/api/v1/search                | get all by search name   |
-| :----------| -----------------------------|--------------------------|----------------------------------------
-| Get        |/api/v1/getById               | get all by id            |
-| :----------| -----------------------------|--------------------------|----------------------------------------
-| Get        |/api/v1/todos/status ={status}| get all by status (0,1,2)|
-| :----------| -----------------------------|--------------------------|---------------------------------------
-| POST       |/api/v1/todos                 | Post new Todo (Create)   |http://localhost:5055/api/v1/todos
-| :----------| -----------------------------|--------------------------|----------------------------------------
-| PUT        |api/v1/todos/:{id}            | Update existed todo by id| http://localhost:5055/api/v1/todos:3
-| :----------| -----------------------------|--------------------------|----------------------------------------
-| PUT        |/api/v1/updateStatus         | Update todo's status      | http://localhost:5055/api/v1/updateStatus?id=1&status=3
-| :----------| -----------------------------|--------------------------|----------------------------------------
-| DELETE     |api/v1/todos/:{id}            | Delete existed todo by id| http://localhost:5055/api/v1/todos:3
-| :----------| -----------------------------|--------------------------|----------------------------------------
+## Available api endpoints for custom user
+
+| Web Method | API Endpoint URL              | Description                | Example                                                              
+| :----------| ------------------------------|----------------------------|----------------------------------------------------------------------
+| GET        | /api/v1/CurrentUser           | Check current user         | http://localhost:5055/api/V1/CurrentUser                                      
+| POST       | /api/v1/signin                | login to authorize the user| http://localhost:5055/api/V1/signin
+| POST       | /api/v1/signup                | Create new user            | http://localhost:5055/api/V1/signup
+| PUT        | /api/v1/changePassword        | Change password            | http://localhost:5055/api/V1/signup                                                         
+ ### Example for create new user                                                        
 ```
-
-
+  {
+    "firstName": "Tsedeke",
+    "lastName": "Habe",
+    "userName": "tshabe",
+    "email": "tsedeke@uef.fi",
+    "password": "1234@parul"
+  }
+```
+ ### Example for signin user                                                        
+```
+  {
+    "email": "tsedeke@uef.fi",
+    "password": "1234@parul"
+  }
+```
+ ### Example for change password                                                        
+```
+  {
+    "currentPassword": "string",
+    "newPassword": "string",
+    "newPasswordConfirmation": "string"
+  }
+```
 Read more: [Dockerizing a Full Stack Application with Docker Compose](https://referbruv.com/blog/posts/dockerizing-multiple-services-integrating-angular-with-aspnetcore-api-via-docker-compose)
 
 # Issues or Ideas?
