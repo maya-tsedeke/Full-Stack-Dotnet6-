@@ -62,7 +62,9 @@ You can also just run the solution without Docker by following the steps below:
 ```
 > dotnet run --project ./Api
 ```
-4. Open a browser with SwaggerUI , automatically navigate to http://localhost or You can use tetsing tools like Postman and you're all set! 
+4. Open a browser with SwaggerUI , automatically navigate to http://localhost or You can use tetsing tools like Postman and you're all set!
+## Available api endpoints
+
 | Web Method | API Endpoint URL              | Description               | Example                                                              
 | :----------| ------------------------------|---------------------------|----------------------------------------------------------------------
 | GET        | /api/v1                       | get all                   | http://localhost:5055/api/v1                                         
