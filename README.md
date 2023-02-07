@@ -10,16 +10,13 @@ The most fundamental building pieces an API has to have are taken into considera
 - [x] Clean Architecture with separated layers for Api, Core, domain, Infrastructure and Application
 - [x] UnitOfWork with Generic Repository
 - [x] Entity Framework Core migrations with SQLite
-- [x] Complete CRUD for an Entity following Clean Architecture
 - [x] Fluent Validation of input inside the Command classes
 - [x] Preconfigured Swagger UI
 - [x] Ready to use Docker configuration with Dockerfiles 
 - [x] JWT Token API for Generation and Configured JWT Validation
 - [x] Roles based Authorization with predefined Roles for passwordchange, and we can also add Authorization for other but idid not add line of code for all. 
-- [x] Complete NUnit Test Implementation
-- [x] API Versioning with separated Swagger Documentation
+- [x] Unit Test Implementation
 - [x] AutoMapper implementation for Entity-to-DTO conversion
-- [x] One Command deployment in Docker with Docker Compose
 - [x] ILogger logging implementation
 
 # Technologies Used
@@ -34,7 +31,7 @@ The most fundamental building pieces an API has to have are taken into considera
 * NUnit3TestAdapter
 * Dockerfile
 
-# How do I get started with Docker Compose?
+# How do I get started with Docker?
 
 To get started, follow the below steps:
 
@@ -69,10 +66,9 @@ You can also just run the solution without Docker by following the steps below:
 ```
 > dotnet run --project ./Api
 ```
-4. Open a browser with SwaggerUI ,or automatically navigate to http://localhost or You can use tetsing tools like Postman and you're all set!
-5. Start with signup user using either SwaggerUI or Postman
-6. Then login to the user account.
-7. You will receive the created token value after logging in. Take a copy of this token, go to the SwaggerUI Authorize button, and enter bearer and pest after the term bearer has been separated by a space. Using POSTMAN, pick Accept and Authorization from the key column, select JSON/Application from the value column accept key Accept, and Pest Token to the Authorization Row under the Value Column. After that, you may use this little project to test and have fun. Below is a table with a list of the end points and examples. 
+4. Open a browser using SwaggerUI, or have it go to http://localhost or Use tetsing tools like Postman, and you're ready to go!
+5.Begin by creating a user account using Postman or SwaggerUI. Log in to the user account after that.
+6. You will receive the created token value after logging in. Take a copy of this token, go to the SwaggerUI Authorize button, and enter bearer and pest after the term bearer has been separated by a space. Using POSTMAN, pick Accept and Authorization from the key column, select JSON/Application from the value column accept key Accept, and Pest Token to the Authorization Row under the Value Column. After that, you may use this little project to test and have fun. Below is a table with a list of the end points and examples. 
 ## Available api endpoints
 
 | Web Method | API Endpoint URL              | Description               | Example                                                              
@@ -127,19 +123,21 @@ You can also just run the solution without Docker by following the steps below:
     "newPasswordConfirmation": "string"
   }
 ```
-Read more: [Dockerizing a Full Stack Application with Docker Compose](https://referbruv.com/blog/posts/dockerizing-multiple-services-integrating-angular-with-aspnetcore-api-via-docker-compose)
+## NB:
+#### Not necessary, but if you wish to migrate a new database you can use the following dotnet command:
+```
+    > dotnet ef migrations add AfterInitialCreate
+    > dotnet ef database update
+```
+# Issues/Ideas?
 
-# Issues or Ideas?
-
-If you face any issues or would like to drop a suggestion, ![raise an issue](https://github.com/referbruv/ContainerNinja.CleanArchitecture/issues/new/choose)
-
-# License
-
-The project is completely open source.
-
+Send me an email at infosignal2@gmail.com or leave a suggestion in the comment section if you have any problems or would like to.
 # Show your Support 
 
-I really hope this solution helps integrify academy get started on building awesome things with ASP.NET Core (.NET 6) Web API for trainee job in full stack developer. 
+I sincerely hope that this solution enables Integrify Academy to begin developing fantastic things with the ASP.NET Core (.NET 6) Web API in preparation for a trainee position as a full stack developer.
 
-Found this solution helpful and useful? You can do these to help this reach greater audience.So Leave a star on this repository :star:
+You found this answer to be useful and helpful? To help this reach a wider audience, you can do these actions. So Please rate this repository with a star.
 
+## Thank you very much!!
+
+### This project might not be available for public usage following your evaluation!
